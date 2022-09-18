@@ -6,45 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/reset.css" />
     <link rel="stylesheet" href="../CSS/style.css" />
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9a79bd6bbb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <title>JS calculator</title>
   </head>
   <body>
     <div>
       <div class="container">
-        <div id="header">Calcolatrice</div>
-        <div><input type="text" id="display" readonly /></div>
+        <div id="header">CAL-COOL-ATOR</div>
+        <div><input type="text" id="display" readonly placeholder="try me!" /></div>
         <div id="keyboard">
           <div id="numbers">
             <div class="row">
-              <button>7</button>
-              <button>8</button>
-              <button>9</button>
+              <button onclick="writeToDisplay('7')">7</button>
+              <button onclick="writeToDisplay('8')">8</button>
+              <button onclick="writeToDisplay('9')">9</button>
             </div>
             <div class="row">
-              <button>4</button>
-              <button>5</button>
-              <button>6</button>
+              <button onclick="writeToDisplay('4')">4</button>
+              <button onclick="writeToDisplay('5')">5</button>
+              <button onclick="writeToDisplay('6')">6</button>
             </div>
             <div class="row">
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
+              <button onclick="writeToDisplay('1')">1</button>
+              <button onclick="writeToDisplay('2')">2</button>
+              <button onclick="writeToDisplay('3')">3</button>
             </div>
             <div class="row">
-              <button>C</button>
-              <button>0</button>
-              <button>.</button>
+              <button onclick="deleteDisplay()">C</button>
+              <button onclick="writeToDisplay('0')">0</button>
+              <button onclick="writeToDisplay('.')">.</button>
             </div>
           </div>
           <div class="operators">
-            <button>/</button>
-            <button>X</button>
-            <button>+</button>
-            <button>-</button>
+            <button onclick="writeToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+            <button onclick="writeToDisplay('*')"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="writeToDisplay('+')"><i class="fa-solid fa-plus"></i></button>
+            <button onclick="writeToDisplay('-')"><i class="fa-solid fa-minus"></i></button>
           </div>
         </div>
         <div id="enter">
-          <button>=</button>
+          <button onclick="showResult()"><i class="fa-solid fa-equals"></i></button>
         </div>
       </div>
     </div>
